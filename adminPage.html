@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body class="h-screen overflow-hidden">
+    <div class="h-full w-full grid grid-cols-[100px_auto] md:grid-cols-[300px_auto]">
+        <!-- Sidebar -->
+        <div class="bg-slate-900 text-white flex flex-col justify-between">
+            <div>
+                <h1 class="bg-slate-800 text-center font-bold text-3xl p-8 hidden md:block">Admin Panel</h1>
+                <div class="h-1 bg-slate-700 w-full"></div>
+
+                <div class="py-10 px-5">
+                    <a href='adminPage.html'
+                        class="bg-slate-500 hover:bg-slate-500 px-4 py-3 rounded-xl mb-3 flex items-center justify-center md:justify-start gap-5">
+                        <i class="fa-solid fa-chart-simple text-xl text-white"></i>
+                        <p class="hidden md:block">Analytics</p>
+                    </a>
+                    <a href="adminMessages.html"
+                        class="bg-slate-700 hover:bg-slate-500 px-4 py-3 rounded-xl mb-3 flex items-center justify-center md:justify-start gap-5">
+                        <i class="fa-solid fa-message text-xl text-white"></i>
+                        <p class="hidden md:block">Messages</p>
+                    </a>
+                    <a href="adminProducts.html"
+                        class="bg-slate-700 hover:bg-slate-500 px-4 py-3 rounded-xl mb-3 flex items-center justify-center md:justify-start gap-5">
+                        <i class="fa-solid fa-boxes-stacked text-xl text-white"></i>
+                        <p class="hidden md:block">Products</p>
+                    </a>
+                    <a href="adminReports.html"
+                        class="bg-slate-700 hover:bg-slate-500 px-4 py-3 rounded-xl mb-3 flex items-center justify-center md:justify-start gap-5">
+                        <i class="fa-solid fa-flag text-xl text-white"></i>
+                        <p class="hidden md:block">Reports</p>
+                    </a>
+                    <a
+                        class="bg-slate-700 hover:bg-slate-500 px-4 py-3 rounded-xl mb-3 flex items-center justify-center md:justify-start gap-5">
+                        <i class="fa-solid fa-gear text-xl text-white"></i>
+                        <p class="hidden md:block">Settings</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bottom Buttons -->
+            <div class="px-5 pb-6">
+                <a href="adminProjects.html"
+                    class="bg-slate-700 hover:bg-slate-500 px-4 py-3 rounded-xl mb-3 flex items-center justify-center md:justify-start gap-5">
+                    <i class="fa-solid fa-square-plus text-xl text-white"></i>
+
+                    <p class="hidden md:block">Add Projects</p>
+                </a>
+                <a href="login.html"
+                    class="bg-red-500 hover:bg-red-600 px-4 py-3 rounded-xl flex items-center justify-center md:justify-start gap-5">
+                    <i class="fa-solid fa-right-from-bracket text-xl text-white"></i>
+                    <p class="hidden md:block">Logout</p>
+                </a>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="overflow-y-auto bg-gray-50
+        ">
+            <p class="text-3xl text-slate-900 font-bold p-8 bg-white shadow-md">Analytics</p>
+
+            <div class="p-5 md:p-8 grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-10">
+                <div
+                    class="h-[170px] bg-blue-500 p-8 text-white rounded-xl shadow-md flex flex-col items-center justify-center gap-2">
+                    <p class="text-2xl font-bold text-center">Products</p>
+                    <p class="text-4xl font-bold text-center">50</p>
+                </div>
+
+                <div
+                    class="h-[170px] bg-orange-500 text-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center gap-2">
+                    <p class="text-2xl font-bold text-center">Messages</p>
+                    <p class="text-4xl font-bold text-center">512K</p>
+                </div>
+
+                <div
+                    class="h-[170px] bg-red-500 text-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center gap-2">
+                    <p class="text-2xl font-bold text-center">Reports</p>
+                    <p class="text-4xl font-bold text-center">325</p>
+                </div>
+
+                <div
+                    class="h-[170px] bg-green-500 text-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center gap-2">
+                    <p class="text-2xl font-bold text-center">Projects</p>
+                    <p class="text-4xl font-bold text-center">325</p>
+                </div>
+
+                <div
+                    class="h-[170px] bg-red-500 text-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center gap-2">
+                    <p class="text-2xl font-bold text-center">Sell</p>
+                    <p class="text-4xl font-bold text-center">32K</p>
+                </div>
+
+                <div
+                    class="h-[170px] bg-pink-500 text-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center gap-2">
+                    <p class="text-2xl font-bold text-center">Revenue</p>
+                    <p class="text-4xl font-bold text-center">Rs 3.2 Cr</p>
+                </div>
+
+                <div
+                    class="h-[170px] bg-purple-500 text-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center gap-2">
+                    <p class="text-2xl font-bold text-center">Profit</p>
+                    <p class="text-4xl font-bold text-center">Rs 1.5 Cr</p>
+                </div>
+
+                <div
+                    class="h-[170px] bg-slate-500 text-white p-8 rounded-xl shadow-md flex flex-col items-center justify-center gap-2">
+                    <p class="text-2xl font-bold text-center">RTO</p>
+                    <p class="text-4xl font-bold text-center">3.2%</p>
+                </div>
+            </div>
+
+
+            <div class="p-5 md:p-8">
+                <p class="text-2xl font-bold text-slate-900 mb-2">Recent Messages</p>
+                <div class="h-1 bg-slate-500 mb-8"></div>
+
+                <div class="w-full overflow-x-auto bg-white shadow-lg rounded-lg">
+                    <table class="min-w-full table-auto text-md ">
+                        <!-- Header -->
+                        <thead class="bg-slate-900 text-white">
+                            <tr>
+                                <th class="px-4 py-3 text-left">ID</th>
+                                <th class="px-4 py-3 text-left">Customer Name</th>
+                                <th class="px-4 py-3 text-left">Message</th>
+                                <th class="px-4 py-3 text-left">Date & Time</th>
+                                <th class="px-4 py-3 text-left">Actions</th>
+                            </tr>
+                        </thead>
+
+                        <!-- Body -->
+                        <tbody class="text-gray-800">
+                            <!-- 20 dummy messages -->
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td class="px-4 py-3 border-b">1</td>
+                                <td class="px-4 py-3 border-b">Alice Johnson</td>
+                                <td class="px-4 py-3 border-b">Need help with my order.</td>
+                                <td class="px-4 py-3 border-b">2025-06-09 09:30 AM</td>
+                                <td class="px-4 py-3 border-b">
+                                    <div class="flex space-x-2">
+                                        <button
+                                            class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-md">
+                                            <i class="fa-solid fa-pen-to-square"></i> Edit
+                                        </button>
+                                        <button
+                                            class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-md">
+                                            <i class="fa-solid fa-trash"></i> Delete
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td class="px-4 py-3 border-b">2</td>
+                                <td class="px-4 py-3 border-b">Bob Smith</td>
+                                <td class="px-4 py-3 border-b">Received wrong product.</td>
+                                <td class="px-4 py-3 border-b">2025-06-09 10:00 AM</td>
+                                <td class="px-4 py-3 border-b">
+                                    <div class="flex space-x-2">
+                                        <button
+                                            class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-md">
+                                            <i class="fa-solid fa-pen-to-square"></i> Edit
+                                        </button>
+                                        <button
+                                            class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-md">
+                                            <i class="fa-solid fa-trash"></i> Delete
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- repeat similar rows -->
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td class="px-4 py-3 border-b">3</td>
+                                <td class="px-4 py-3 border-b">Charlie Lee</td>
+                                <td class="px-4 py-3 border-b">Payment issue encountered.</td>
+                                <td class="px-4 py-3 border-b">2025-06-09 10:30 AM</td>
+                                <td class="px-4 py-3 border-b">
+                                    <div class="flex space-x-2">
+                                        <button
+                                            class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-md">
+                                            <i class="fa-solid fa-pen-to-square"></i> Edit
+                                        </button>
+                                        <button
+                                            class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-md">
+                                            <i class="fa-solid fa-trash"></i> Delete
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td class="px-4 py-3 border-b">4</td>
+                                <td class="px-4 py-3 border-b">Diana Cruz</td>
+                                <td class="px-4 py-3 border-b">Product not delivered.</td>
+                                <td class="px-4 py-3 border-b">2025-06-09 11:00 AM</td>
+                                <td class="px-4 py-3 border-b">
+                                    <div class="flex space-x-2">
+                                        <button
+                                            class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-md">
+                                            <i class="fa-solid fa-pen-to-square"></i> Edit
+                                        </button>
+                                        <button
+                                            class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-md">
+                                            <i class="fa-solid fa-trash"></i> Delete
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td class="px-4 py-3 border-b">5</td>
+                                <td class="px-4 py-3 border-b">Evan Ross</td>
+                                <td class="px-4 py-3 border-b">Need invoice copy.</td>
+                                <td class="px-4 py-3 border-b">2025-06-09 11:30 AM</td>
+                                <td class="px-4 py-3 border-b">
+                                    <div class="flex space-x-2">
+                                        <button
+                                            class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-md">
+                                            <i class="fa-solid fa-pen-to-square"></i> Edit
+                                        </button>
+                                        <button
+                                            class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-md">
+                                            <i class="fa-solid fa-trash"></i> Delete
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td class="px-4 py-3 border-b">6</td>
+                                <td class="px-4 py-3 border-b">Farah Khan</td>
+                                <td class="px-4 py-3 border-b">Order delayed.</td>
+                                <td class="px-4 py-3 border-b">2025-06-09 12:00 PM</td>
+                                <td class="px-4 py-3 border-b">
+                                    <div class="flex space-x-2">
+                                        <button
+                                            class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-md">
+                                            <i class="fa-solid fa-pen-to-square"></i> Edit
+                                        </button>
+                                        <button
+                                            class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-md">
+                                            <i class="fa-solid fa-trash"></i> Delete
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td class="px-4 py-3 border-b">7</td>
+                                <td class="px-4 py-3 border-b">George Miller</td>
+                                <td class="px-4 py-3 border-b">Need refund info.</td>
+                                <td class="px-4 py-3 border-b">2025-06-09 12:30 PM</td>
+                                <td class="px-4 py-3 border-b">
+                                    <div class="flex space-x-2">
+                                        <button
+                                            class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-md">
+                                            <i class="fa-solid fa-pen-to-square"></i> Edit
+                                        </button>
+                                        <button
+                                            class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-md">
+                                            <i class="fa-solid fa-trash"></i> Delete
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td class="px-4 py-3 border-b">8</td>
+                                <td class="px-4 py-3 border-b">Hannah Wells</td>
+                                <td class="px-4 py-3 border-b">Broken item received.</td>
+                                <td class="px-4 py-3 border-b">2025-06-09 01:00 PM</td>
+                                <td class="px-4 py-3 border-b">
+                                    <div class="flex space-x-2">
+                                        <button
+                                            class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-md">
+                                            <i class="fa-solid fa-pen-to-square"></i> Edit
+                                        </button>
+                                        <button
+                                            class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-md">
+                                            <i class="fa-solid fa-trash"></i> Delete
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bg-white hover:bg-gray-50">
+                                <td class="px-4 py-3 border-b">9</td>
+                                <td class="px-4 py-3 border-b">Ian Scott</td>
+                                <td class="px-4 py-3 border-b">Requesting tracking ID.</td>
+                                <td class="px-4 py-3 border-b">2025-06-09 01:30 PM</td>
+                                <td class="px-4 py-3 border-b">
+                                    <div class="flex space-x-2">
+                                        <button
+                                            class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-md">
+                                            <i class="fa-solid fa-pen-to-square"></i> Edit
+                                        </button>
+                                        <button
+                                            class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-md">
+                                            <i class="fa-solid fa-trash"></i> Delete
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-gray-100">
+                                <td class="px-4 py-3 border-b">10</td>
+                                <td class="px-4 py-3 border-b">Jenna Blake</td>
+                                <td class="px-4 py-3 border-b">Satisfied with the support.</td>
+                                <td class="px-4 py-3 border-b">2025-06-09 02:00 PM</td>
+                                <td class="px-4 py-3 border-b">
+                                    <div class="flex space-x-2">
+                                        <button
+                                            class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-md">
+                                            <i class="fa-solid fa-pen-to-square"></i> Edit
+                                        </button>
+                                        <button
+                                            class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-md">
+                                            <i class="fa-solid fa-trash"></i> Delete
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- Add 10 more similar rows to make it 20 -->
+                            <!-- ... -->
+                        </tbody>
+
+                        <!-- Footer -->
+                        <tfoot class="bg-slate-900 text-white text-sm text-center">
+                            <tr>
+                                <td colspan="5" class="py-3">Showing 1 to 20 of 20 messages</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                    <!-- Pagination UI -->
+                    <div class="flex justify-between items-center px-6 py-4 border-t bg-white">
+                        <span class="text-sm text-gray-600">Page 1 of 2</span>
+                        <div class="flex space-x-2">
+                            <button class="px-3 py-1 bg-gray-200 text-sm rounded hover:bg-gray-300">« Prev</button>
+                            <button class="px-3 py-1 bg-slate-900 text-white text-sm rounded">1</button>
+                            <button class="px-3 py-1 bg-gray-200 text-sm rounded hover:bg-gray-300">2</button>
+                            <button class="px-3 py-1 bg-gray-200 text-sm rounded hover:bg-gray-300">Next »</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

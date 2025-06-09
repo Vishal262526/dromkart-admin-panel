@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body class="h-screen overflow-hidden">
+
+  <div class="h-full w-full grid grid-cols-[100px_auto] md:grid-cols-[300px_auto]">
+
+    <!-- Sidebar -->
+    <div class="bg-slate-900 text-white flex flex-col justify-between">
+      <div>
+        <h1 class="bg-slate-800 text-center font-bold text-3xl p-8 hidden md:block">Admin Panel</h1>
+        <div class="h-1 bg-slate-700 w-full"></div>
+
+        <div class="py-10 px-5">
+          <a href='adminPage.html'
+            class="bg-slate-700 hover:bg-slate-500 px-4 py-3 rounded-xl mb-3 flex items-center justify-center md:justify-start gap-5">
+            <i class="fa-solid fa-chart-simple text-xl text-white"></i>
+            <p class="hidden md:block">Analytics</p>
+          </a>
+          <a href="adminMessages.html"
+            class="bg-slate-700 hover:bg-slate-500 px-4 py-3 rounded-xl mb-3 flex items-center justify-center md:justify-start gap-5">
+            <i class="fa-solid fa-message text-xl text-white"></i>
+            <p class="hidden md:block">Messages</p>
+          </a>
+          <a href="adminProducts.html"
+            class="bg-slate-500 hover:bg-slate-500 px-4 py-3 rounded-xl mb-3 flex items-center justify-center md:justify-start gap-5">
+            <i class="fa-solid fa-boxes-stacked text-xl text-white"></i>
+            <p class="hidden md:block">Products</p>
+          </a>
+          <a href="adminReports.html"
+            class="bg-slate-700 hover:bg-slate-500 px-4 py-3 rounded-xl mb-3 flex items-center justify-center md:justify-start gap-5">
+            <i class="fa-solid fa-flag text-xl text-white"></i>
+            <p class="hidden md:block">Reports</p>
+          </a>
+          <a
+            class="bg-slate-700 hover:bg-slate-500 px-4 py-3 rounded-xl mb-3 flex items-center justify-center md:justify-start gap-5">
+            <i class="fa-solid fa-gear text-xl text-white"></i>
+            <p class="hidden md:block">Settings</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Bottom Buttons -->
+      <div class="px-5 pb-6">
+        <a href="adminProjects.html"
+          class="bg-slate-700 hover:bg-slate-500 px-4 py-3 rounded-xl mb-3 flex items-center justify-center md:justify-start gap-5">
+          <i class="fa-solid fa-square-plus text-xl text-white"></i>
+
+          <p class="hidden md:block">Add Projects</p>
+        </a>
+        <a href="login.html"
+          class="bg-red-500 hover:bg-red-600 px-4 py-3 rounded-xl flex items-center justify-center md:justify-start gap-5">
+          <i class="fa-solid fa-right-from-bracket text-xl text-white"></i>
+          <p class="hidden md:block">Logout</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="overflow-y-auto bg-gray-50
+        ">
+
+      <p class="text-3xl text-slate-900 font-bold p-8 bg-white shadow-md">Products</p>
+
+
+      <div class="p-5 md:p-8">
+
+        <div class="text-end">
+          <a href="addProduct.html"
+            class="bg-slate-700 hover:bg-slate-900 text-end text-white font-bold text-lg px-5 py-3 rounded-lg inline-block mb-5">Add
+            Product</a>
+        </div>
+
+        <div class="w-full bg-white shadow-lg rounded-lg overflow-x-auto">
+          <table class="min-w-full table-auto text-md">
+            <!-- Header -->
+            <thead class="bg-slate-900 text-white">
+              <tr>
+                <th class="px-4 py-3 text-left">ID</th>
+                <th class="px-4 py-3 text-left">Product Name</th>
+                <th class="px-4 py-3 text-left">Category</th>
+                <th class="px-4 py-3 text-left">Price</th>
+                <th class="px-4 py-3 text-left">Stock</th>
+                <th class="px-4 py-3 text-left">Actions</th>
+              </tr>
+            </thead>
+
+            <!-- Body -->
+            <tbody class="text-gray-800">
+              <tr class="bg-white hover:bg-gray-50">
+                <td class="px-4 py-3 border-b">1</td>
+                <td class="px-4 py-3 border-b">Wireless Mouse Pro</td>
+                <td class="px-4 py-3 border-b">Accessories</td>
+                <td class="px-4 py-3 border-b">Rs 29.99</td>
+                <td class="px-4 py-3 border-b">120</td>
+                <td class="px-4 py-3 border-b">
+                  <div class="flex space-x-2">
+                    <button
+                      class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-pen-to-square"></i> Edit
+                    </button>
+                    <button
+                      class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-trash"></i> Delete
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="bg-gray-50 hover:bg-gray-100">
+                <td class="px-4 py-3 border-b">2</td>
+                <td class="px-4 py-3 border-b">Smartwatch Series 9</td>
+                <td class="px-4 py-3 border-b">Wearables</td>
+                <td class="px-4 py-3 border-b">Rs 249.00</td>
+                <td class="px-4 py-3 border-b">60</td>
+                <td class="px-4 py-3 border-b">
+                  <div class="flex space-x-2">
+                    <button
+                      class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-pen-to-square"></i> Edit
+                    </button>
+                    <button
+                      class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-trash"></i> Delete
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="bg-white hover:bg-gray-50">
+                <td class="px-4 py-3 border-b">3</td>
+                <td class="px-4 py-3 border-b">Noise-Canceling Headphones XM5</td>
+                <td class="px-4 py-3 border-b">Audio</td>
+                <td class="px-4 py-3 border-b">Rs 379.99</td>
+                <td class="px-4 py-3 border-b">45</td>
+                <td class="px-4 py-3 border-b">
+                  <div class="flex space-x-2">
+                    <button
+                      class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-pen-to-square"></i> Edit
+                    </button>
+                    <button
+                      class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-trash"></i> Delete
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="bg-gray-50 hover:bg-gray-100">
+                <td class="px-4 py-3 border-b">4</td>
+                <td class="px-4 py-3 border-b">Bluetooth Speaker Flip 6</td>
+                <td class="px-4 py-3 border-b">Audio</td>
+                <td class="px-4 py-3 border-b">Rs 129.95</td>
+                <td class="px-4 py-3 border-b">85</td>
+                <td class="px-4 py-3 border-b">
+                  <div class="flex space-x-2">
+                    <button
+                      class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-pen-to-square"></i> Edit
+                    </button>
+                    <button
+                      class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-trash"></i> Delete
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="bg-white hover:bg-gray-50">
+                <td class="px-4 py-3 border-b">5</td>
+                <td class="px-4 py-3 border-b">Gaming Keyboard G915 TKL</td>
+                <td class="px-4 py-3 border-b">Gaming</td>
+                <td class="px-4 py-3 border-b">Rs 199.99</td>
+                <td class="px-4 py-3 border-b">32</td>
+                <td class="px-4 py-3 border-b">
+                  <div class="flex space-x-2">
+                    <button
+                      class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-pen-to-square"></i> Edit
+                    </button>
+                    <button
+                      class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-trash"></i> Delete
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="bg-gray-50 hover:bg-gray-100">
+                <td class="px-4 py-3 border-b">6</td>
+                <td class="px-4 py-3 border-b">USB-C Power Bank 20 000 mAh</td>
+                <td class="px-4 py-3 border-b">Power</td>
+                <td class="px-4 py-3 border-b">Rs 49.50</td>
+                <td class="px-4 py-3 border-b">200</td>
+                <td class="px-4 py-3 border-b">
+                  <div class="flex space-x-2">
+                    <button
+                      class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-pen-to-square"></i> Edit
+                    </button>
+                    <button
+                      class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-trash"></i> Delete
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="bg-white hover:bg-gray-50">
+                <td class="px-4 py-3 border-b">7</td>
+                <td class="px-4 py-3 border-b">4K Action Camera Hero 12</td>
+                <td class="px-4 py-3 border-b">Cameras</td>
+                <td class="px-4 py-3 border-b">Rs 399.00</td>
+                <td class="px-4 py-3 border-b">22</td>
+                <td class="px-4 py-3 border-b">
+                  <div class="flex space-x-2">
+                    <button
+                      class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-pen-to-square"></i> Edit
+                    </button>
+                    <button
+                      class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-trash"></i> Delete
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="bg-gray-50 hover:bg-gray-100">
+                <td class="px-4 py-3 border-b">8</td>
+                <td class="px-4 py-3 border-b">Portable SSD 1 TB</td>
+                <td class="px-4 py-3 border-b">Storage</td>
+                <td class="px-4 py-3 border-b">Rs 119.00</td>
+                <td class="px-4 py-3 border-b">75</td>
+                <td class="px-4 py-3 border-b">
+                  <div class="flex space-x-2">
+                    <button
+                      class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-pen-to-square"></i> Edit
+                    </button>
+                    <button
+                      class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-trash"></i> Delete
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="bg-white hover:bg-gray-50">
+                <td class="px-4 py-3 border-b">9</td>
+                <td class="px-4 py-3 border-b">NoiseFit Nova</td>
+                <td class="px-4 py-3 border-b">Wearables</td>
+                <td class="px-4 py-3 border-b">Rs 79.99</td>
+                <td class="px-4 py-3 border-b">150</td>
+                <td class="px-4 py-3 border-b">
+                  <div class="flex space-x-2">
+                    <button
+                      class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-pen-to-square"></i> Edit
+                    </button>
+                    <button
+                      class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-trash"></i> Delete
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="bg-gray-50 hover:bg-gray-100">
+                <td class="px-4 py-3 border-b">10</td>
+                <td class="px-4 py-3 border-b">Mini Drone X200</td>
+                <td class="px-4 py-3 border-b">Drones</td>
+                <td class="px-4 py-3 border-b">Rs 159.99</td>
+                <td class="px-4 py-3 border-b">40</td>
+                <td class="px-4 py-3 border-b">
+                  <div class="flex space-x-2">
+                    <button
+                      class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-pen-to-square"></i> Edit
+                    </button>
+                    <button
+                      class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-trash"></i> Delete
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="bg-white hover:bg-gray-50">
+                <td class="px-4 py-3 border-b">11</td>
+                <td class="px-4 py-3 border-b">RGB Desk Lamp Glow</td>
+                <td class="px-4 py-3 border-b">Home Office</td>
+                <td class="px-4 py-3 border-b">Rs 34.95</td>
+                <td class="px-4 py-3 border-b">110</td>
+                <td class="px-4 py-3 border-b">
+                  <div class="flex space-x-2">
+                    <button
+                      class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-pen-to-square"></i> Edit
+                    </button>
+                    <button
+                      class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-trash"></i> Delete
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="bg-gray-50 hover:bg-gray-100">
+                <td class="px-4 py-3 border-b">12</td>
+                <td class="px-4 py-3 border-b">1080p Webcam C920</td>
+                <td class="px-4 py-3 border-b">Accessories</td>
+                <td class="px-4 py-3 border-b">Rs 69.99</td>
+                <td class="px-4 py-3 border-b">90</td>
+                <td class="px-4 py-3 border-b">
+                  <div class="flex space-x-2">
+                    <button
+                      class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-pen-to-square"></i> Edit
+                    </button>
+                    <button
+                      class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-trash"></i> Delete
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="bg-white hover:bg-gray-50">
+                <td class="px-4 py-3 border-b">13</td>
+                <td class="px-4 py-3 border-b">USB-C Hub 7-in-1</td>
+                <td class="px-4 py-3 border-b">Accessories</td>
+                <td class="px-4 py-3 border-b">Rs 44.90</td>
+                <td class="px-4 py-3 border-b">180</td>
+                <td class="px-4 py-3 border-b">
+                  <div class="flex space-x-2">
+                    <button
+                      class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-pen-to-square"></i> Edit
+                    </button>
+                    <button
+                      class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-trash"></i> Delete
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="bg-gray-50 hover:bg-gray-100">
+                <td class="px-4 py-3 border-b">14</td>
+                <td class="px-4 py-3 border-b">Mechanical Keyboard K2 V2</td>
+                <td class="px-4 py-3 border-b">Gaming</td>
+                <td class="px-4 py-3 border-b">Rs 89.00</td>
+                <td class="px-4 py-3 border-b">55</td>
+                <td class="px-4 py-3 border-b">
+                  <div class="flex space-x-2">
+                    <button
+                      class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-pen-to-square"></i> Edit
+                    </button>
+                    <button
+                      class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-trash"></i> Delete
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr class="bg-white hover:bg-gray-50">
+                <td class="px-4 py-3 border-b">15</td>
+                <td class="px-4 py-3 border-b">Smart LED Bulb A19</td>
+                <td class="px-4 py-3 border-b">Smart Home</td>
+                <td class="px-4 py-3 border-b">Rs 14.99</td>
+                <td class="px-4 py-3 border-b">300</td>
+                <td class="px-4 py-3 border-b">
+                  <div class="flex space-x-2">
+                    <button
+                      class="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-pen-to-square"></i> Edit
+                    </button>
+                    <button
+                      class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-md">
+                      <i class="fa-solid fa-trash"></i> Delete
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Pagination UI -->
+          <div class="flex justify-between items-center px-6 py-4 border-t bg-white">
+            <span class="text-sm text-gray-600">Page 1 of 2</span>
+            <div class="flex space-x-2">
+              <button class="px-3 py-1 bg-gray-200 text-sm rounded hover:bg-gray-300">« Prev</button>
+              <button class="px-3 py-1 bg-slate-900 text-white text-sm rounded">1</button>
+              <button class="px-3 py-1 bg-gray-200 text-sm rounded hover:bg-gray-300">2</button>
+              <button class="px-3 py-1 bg-gray-200 text-sm rounded hover:bg-gray-300">Next »</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>

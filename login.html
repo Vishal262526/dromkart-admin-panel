@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel - E-Commerce</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+    <div class="h-screen  bg-linear-to-r from-grey-100  to-grey-200 flex items-center justify-center">
+
+        <div class=" basis-[500px] p-10 bg-white rounded-xl shadow-md">
+            <h1 class="text-3xl font-bold mb-1">Welcome Back!</h1>
+            <p class="text-xl  text-gray-500 mb-5">Fill all the details to continue</p>
+            <form>
+                <!-- Email input -->
+                <div class="mb-3">
+                    <label class="block mb-2" for="email">Email Address</label>
+                    <input
+                        class="border border-gray-500 px-4 py-2 text-lg rounded-md w-full focus:outline-black focus:outline-2"
+                        type="email" name="email" id="email">
+                </div>
+
+                <!-- Password Input -->
+                <label class="block mb-2" for="password">Password</label>
+                <input
+                    class="border border-gray-500 px-4 py-2 text-lg rounded-md w-full focus:outline-black focus:outline-2"
+                    type="password" name="password" id="password">
+
+
+                <p class="text-gray-500 underline my-5 cursor-pointer">Forget Password</p>
+
+
+                <div class="mb-5">
+                    <a href="adminPage.html"
+                        class="bg-gray-700  hover:bg-black rounded-xl font-bold text-white block text-center w-full px-4 py-3">
+                        Log In
+                    </a>
+                </div>
+
+                <p class="text-center text-xl">If you don't have an account? <a href="signup.html"
+                        class="text-black font-bold underline cursor-pointer">Create New</a></p>
+
+            </form>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
